@@ -1,0 +1,18 @@
+{
+    "name": "jorgemddev/jamd_utilidad",
+    "description": "Clase con varios metodos utiles para validar, formatear y realizar tareas basicas pero necesarias en el procesamiento de información",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Jorgemddev\\JamdUtilidad\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jorge Morales D",
+            "email": "jorge.md.app@gmail.com"
+        }
+    ],
+    "require": {}
+}
