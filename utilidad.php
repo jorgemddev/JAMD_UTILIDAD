@@ -481,7 +481,15 @@ class Utilidad
         $method = 'aes-256-cbc';
         return openssl_decrypt($data, $method, self::$keyEncrypt, false, $iv);
     }
-
+    /**
+     * Valida si una fecha es correcta
+     * @param String $date
+     * @return boolean true, success
+     */
+    public static function validateDate($date, $format = 'd-m-Y') {
+        $d = DateTime::createFromFormat($format, $date);
+        return $d && $d->format($format) == $date;
+    }
 
     /**
      * convierte una fecha a palabras en español
