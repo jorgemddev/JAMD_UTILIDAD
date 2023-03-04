@@ -1,6 +1,6 @@
 <?php
 
-namespace jorgemddev\jamd_utilidad;
+namespace JamdUtilidad;
 
 /**
  * Utility class with various methods common to working with strings and dates, among other things
