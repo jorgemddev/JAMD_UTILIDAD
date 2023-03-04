@@ -1,6 +1,6 @@
 <?php
 
-namespace Jorgemddev\JamdUtilidad;
+namespace jorgemddev\jamd_utilidad;
 
 /**
  * Utility class with various methods common to working with strings and dates, among other things
@@ -13,7 +13,7 @@ namespace Jorgemddev\JamdUtilidad;
 class Utilidad
 {
 
-    private static $keyEncrypt = "BEDAtriunfaremosConFuerzaYperceverancia21232902";
+    private static $keyEncrypt = "aquí va tu key secreta";
 
 
 
