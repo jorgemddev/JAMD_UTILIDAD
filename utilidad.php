@@ -325,6 +325,24 @@ class Utilidad
         }
     }
 
+    /**
+     * Valida que el captcha V2, sea valido
+     */
+    public static function validateReCaptchaV2($captcha,$key_secret) {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query(array('secret' => $key_secret, 'response' => $captcha)));
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $response = curl_exec($ch);
+        curl_close($ch);
+        $arrResponse = json_decode($response, true);
+        if ($arrResponse["success"] == true) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 
     /**
